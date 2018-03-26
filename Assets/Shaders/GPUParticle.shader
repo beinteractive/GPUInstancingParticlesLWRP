@@ -75,34 +75,17 @@ Shader "GPUParticle"
             #pragma instancing_options procedural:vertInstancingSetup
             
             #include "CoreRP/ShaderLibrary/UnityInstancing.hlsl"
-            #include "LWRP/ShaderLibrary/Particles.hlsl"
+            #include "Particles.hlsl"
             #include "LWRP/ShaderLibrary/Lighting.hlsl"
-            #include "ParticleInstancing.hlsl"
-            
-            // Vertex shader input
-            struct appdata_particles_instanced
-            {
-                float4 vertex : POSITION;
-                float3 normal : NORMAL;
-                half4 color : COLOR;
-            #if defined(_FLIPBOOK_BLENDING) && !defined(UNITY_PARTICLE_INSTANCING_ENABLED)
-                float4 texcoords : TEXCOORD0;
-                float texcoordBlend : TEXCOORD1;
-            #else
-                float2 texcoords : TEXCOORD0;
-            #endif
-            #if defined(_NORMALMAP)
-                float4 tangent : TANGENT;
-            #endif
-                UNITY_VERTEX_INPUT_INSTANCE_ID
-            };
 
-            VertexOutputLit ParticlesLitVertex(appdata_particles_instanced v)
+            VertexOutputLit ParticlesLitVertex(appdata_particles v)
             {
                 VertexOutputLit o;
                 UNITY_SETUP_INSTANCE_ID(v);
+                UNITY_TRANSFER_INSTANCE_ID(v, o);
                 OUTPUT_NORMAL(v, o);
 
+                vertColor(v.color);
                 o.color = v.color * _Color;
                 o.posWS.xyz = TransformObjectToWorld(v.vertex.xyz).xyz;
                 o.posWS.w = ComputeFogFactor(o.clipPos.z);
@@ -115,6 +98,8 @@ Shader "GPUParticle"
 
             half4 ParticlesLitFragment(VertexOutputLit IN) : SV_Target
             {
+                UNITY_SETUP_INSTANCE_ID(IN);
+                
                 SurfaceData surfaceData;
                 InitializeSurfaceData(IN, surfaceData);
 
