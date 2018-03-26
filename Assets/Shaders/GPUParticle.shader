@@ -96,22 +96,18 @@ Shader "GPUParticle"
             #endif
                 UNITY_VERTEX_INPUT_INSTANCE_ID
             };
-            
+
             VertexOutputLit ParticlesLitVertex(appdata_particles_instanced v)
             {
                 VertexOutputLit o;
-                
                 UNITY_SETUP_INSTANCE_ID(v);
-                
-#if _NORMALMAP
-                OutputTangentToWorld(v.tangent, v.normal, o.tangent, o.binormal, o.normal);
-#else
-                o.normal = normalize(TransformObjectToWorldNormal(v.normal));
-#endif
-                o.color = v.color;
+                OUTPUT_NORMAL(v, o);
+
+                o.color = v.color * _Color;
                 o.posWS.xyz = TransformObjectToWorld(v.vertex.xyz).xyz;
                 o.posWS.w = ComputeFogFactor(o.clipPos.z);
                 o.clipPos = TransformWorldToHClip(o.posWS.xyz);
+                o.viewDirShininess.xyz = VertexViewDirWS(GetCameraPositionWS() - o.posWS.xyz);
                 vertTexcoord(v, o);
                 vertFading(o, o.posWS, o.clipPos);
                 return o;
@@ -130,7 +126,7 @@ Shader "GPUParticle"
                 ApplyFog(color.rgb, inputData.fogCoord);
                 return color;
             }
-            
+
             ENDHLSL
         }
     }
