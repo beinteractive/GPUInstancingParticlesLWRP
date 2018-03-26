@@ -1,0 +1,3 @@
+[submodule "Packages/Kino"]
+	path = Packages/Kino
+	url = git@github.com:keijiro/Kino.git

@@ -15,6 +15,7 @@ MonoBehaviour:
   - {fileID: 114205049376289342}
   - {fileID: 114614427153307486}
   - {fileID: 114533430274467626}
+  - {fileID: 114286615928257160}
 --- !u!114 &114205049376289342
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -57,6 +58,58 @@ MonoBehaviour:
   dirtIntensity:
     overrideState: 0
     value: 0
+--- !u!114 &114286615928257160
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc9ba51565624d441a5a5234bb0e6647, type: 3}
+  m_Name: Overlay
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  gradient:
+    overrideState: 1
+    value:
+      serializedVersion: 2
+      key0: {r: 0.07843137, g: 0.91441417, b: 1, a: 1}
+      key1: {r: 0.764151, g: 0.64382154, b: 0.40730688, a: 1}
+      key2: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 38743
+      ctime2: 38743
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+  opacity:
+    overrideState: 1
+    value: 0.083
+  angle:
+    overrideState: 1
+    value: 38
 --- !u!114 &114533430274467626
 MonoBehaviour:
   m_ObjectHideFlags: 3
