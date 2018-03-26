@@ -14,7 +14,7 @@ MonoBehaviour:
   kAssetVersion: 2
   m_MaxPixelLights: 1
   m_SupportsVertexLight: 0
-  m_RequireDepthTexture: 0
+  m_RequireDepthTexture: 1
   m_RequireSoftParticles: 0
   m_SupportsHDR: 1
   m_MSAA: 4

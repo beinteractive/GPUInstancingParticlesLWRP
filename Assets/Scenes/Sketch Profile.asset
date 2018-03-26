@@ -16,6 +16,8 @@ MonoBehaviour:
   - {fileID: 114614427153307486}
   - {fileID: 114533430274467626}
   - {fileID: 114286615928257160}
+  - {fileID: 114883708382290468}
+  - {fileID: 114400212926779772}
 --- !u!114 &114205049376289342
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -110,6 +112,54 @@ MonoBehaviour:
   angle:
     overrideState: 1
     value: 38
+--- !u!114 &114400212926779772
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1cb7e9e120078f43bce4f0b1be547a7, type: 3}
+  m_Name: AmbientOcclusion
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  mode:
+    overrideState: 0
+    value: 1
+  intensity:
+    overrideState: 1
+    value: 3.48
+  color:
+    overrideState: 1
+    value: {r: 0.07929344, g: 0.047659304, b: 0.1981132, a: 1}
+  ambientOnly:
+    overrideState: 0
+    value: 1
+  noiseFilterTolerance:
+    overrideState: 0
+    value: 0
+  blurTolerance:
+    overrideState: 0
+    value: -4.6
+  upsampleTolerance:
+    overrideState: 0
+    value: -12
+  thicknessModifier:
+    overrideState: 1
+    value: 4.86
+  directLightingStrength:
+    overrideState: 0
+    value: 0
+  radius:
+    overrideState: 0
+    value: 0.25
+  quality:
+    overrideState: 0
+    value: 2
 --- !u!114 &114533430274467626
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -178,4 +228,19 @@ MonoBehaviour:
     value: 83
   kernelSize:
     overrideState: 0
+    value: 1
+--- !u!114 &114883708382290468
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f848ec27aed44464493317be7fc364a6, type: 3}
+  m_Name: LWRPAO
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
     value: 1
