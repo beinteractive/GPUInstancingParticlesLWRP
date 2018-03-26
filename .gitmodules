@@ -1,3 +1,6 @@
 [submodule "Packages/Kino"]
 	path = Packages/Kino
 	url = git@github.com:keijiro/Kino.git
+[submodule "Packages/jp.keijiro.ffmpegout"]
+	path = Packages/jp.keijiro.ffmpegout
+	url = git@github.com:beinteractive/jp.keijiro.ffmpegout.git
