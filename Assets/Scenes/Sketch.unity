@@ -255,6 +255,7 @@ GameObject:
   - component: {fileID: 1344019126}
   - component: {fileID: 1344019125}
   - component: {fileID: 1344019129}
+  - component: {fileID: 1344019130}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -391,6 +392,26 @@ MonoBehaviour:
   m_AfterStackBundles:
   - assemblyQualifiedName: Kino.PostProcessing.Overlay, jp.keijiro.kino.post-processing.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &1344019130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1344019124}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a66fbd5ffe9b9d64da304996f1919f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _setResolution: 0
+  _width: 960
+  _height: 960
+  _frameRate: 60
+  _allowSlowDown: 1
+  _preset: 0
+  _startTime: 0
+  _recordLength: 10
+  _shader: {fileID: 4800000, guid: a4bd3b00ad1ed53458ec6ff07694985e, type: 3}
 --- !u!1 &1363414361
 GameObject:
   m_ObjectHideFlags: 0
